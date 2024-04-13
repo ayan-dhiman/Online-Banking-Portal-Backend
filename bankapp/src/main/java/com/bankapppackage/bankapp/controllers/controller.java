@@ -88,23 +88,11 @@ public class controller {
 		return repo.findByPhone(phone);
 	}
 	
-	
-//	---------------------Sakshi--------------------------------------
-	
 	@PutMapping("/updateCustomer/{accountNumber}")
     public void updateCustomer(@PathVariable long accountNumber, @RequestBody User user) {
         User u = repo.findByAccountNumber(accountNumber);
         u.setPassword(user.getPassword());
         repo.save(u);
     }
-	
-//	---------------------Sakshi--------------------------------------
-	
-//	---------------------Shivang--------------------------------------
-	
-	
-	
-	
-//	---------------------Shivang--------------------------------------
 
 }
